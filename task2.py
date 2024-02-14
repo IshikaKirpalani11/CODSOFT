@@ -1,0 +1,43 @@
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y == 0:
+        return "Cannot divide by zero"
+    else:
+        return x / y
+
+def calculator():
+    print("Welcome to Simple Calculator!")
+    print("Operations:")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+
+    # Get user input for numbers and operation
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+    operation = input("Enter operation choice (1/2/3/4): ")
+
+    # Perform calculation based on operation choice
+    if operation == '1':
+        print("Result:", add(num1, num2))
+    elif operation == '2':
+        print("Result:", subtract(num1, num2))
+    elif operation == '3':
+        print("Result:", multiply(num1, num2))
+    elif operation == '4':
+        print("Result:", divide(num1, num2))
+    else:
+        print("Invalid operation choice")
+
+
+# Call the calculator function to start the program
+calculator()
